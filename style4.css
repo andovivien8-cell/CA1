@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  /* font-family: Arial, sans-serif; */
+}
+
+.section {
+  height: 100vh; /* full screen height */
+  width: 100%;
+  background-size: cover; /* with contain it would look better, but then it wouldn't take up the whole space, and i want it to look like a background. */
+  background-position: center;
+  background-repeat: no-repeat; /* I don't want multiple of the same image */
+  background-attachment: scroll;
+
+  display: flex;
+  flex-direction: column;   /* stacks h2 and p vertically */
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  position: relative;
+  bottom: 10%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.vids {
+    float: left;
+    position: relative;
+    top: 8%;
+}
+
+.content{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 70%;
+}
+
+.content img{
+  max-inline-size: 50%;
+  position: relative;
+  bottom: 15%;
+  right: 10%;
+}
+
+.img1 {
+  background-image: url("red.avif");
+}
+
+.img2 {
+  background-image: url("red.avif");
+}
+
+h3 {
+    font-size: 35px;
+    position: relative;
+    left: 18%;
+}
+
+h4 {
+    font-size: 25px;
+    position: relative;
+    top: 10%;
+    color: rgb(151, 161, 191);
+    
+}
+
+.script-button {
+    background-color: white;
+    border-color: rgb(169, 199, 224);
+    border-style: solid;
+    border-width: 2px;
+    color: rgb(169, 199, 224);
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.15s,
+    color 0.15s;
+    position: relative;
+    bottom: 260%;
+    left: 220%;
+}
+
+.script-button:hover {
+    background-color: rgb(169, 199, 224);
+    color: white;
+}
+
+.script-button:active {
+    opacity: 0.7;
+}
+
+.archive-button {
+    background-color: rgb(203, 129, 55);
+    color: white;
+    border: none;
+    height: 32px;
+    width: 100px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: opacity 0.15s;
+    position: fixed;
+    bottom: 10%;
+    left: 80%;
+}
+
+.archive-button:hover {
+   opacity: 0.8;
+}
+
+.archive-button:active {
+    opacity: 0.5;
+}
+
+
+.content p{
+  font-size: 15px;
+  line-height: 1.6;
+  position: relative;
+  bottom: 9%;
+}
+
+.highlight {
+    background-color: rgb(60, 24, 33);
+    color: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.highlight2 {
+    background-color: rgb(73, 38, 46);
+    padding: 1px 4px;
+    border-radius: 1px;
+}

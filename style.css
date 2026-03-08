@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  /* font-family: Arial, sans-serif; */
+}
+
+.section {
+  height: 100vh; /* full screen height */
+  width: 100%;
+  background-size: cover; /* with contain it would look better, but then it wouldn't take up the whole space, and i want it to look like a background. */
+  background-position: center;
+  background-repeat: no-repeat; /* I don't want multiple of the same image */
+
+  display: flex;
+  flex-direction: column;   /* stacks h2 and p vertically */
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 40px;
+}
+
+/* Each section image */
+
+.img1 {
+  background-image: url("image1.webp");
+}
+
+.img2 {
+  background-image: url("image2.avif");
+}
+
+.img3 {
+  background-image: url("image3.avif");
+}
+
+.img4 {
+  background-image: url("image4.jpeg");
+  background-position: top center; /* Showing the top of the image */
+  justify-content: flex-start; /* content starts at top instead of center */
+  padding-top: 60px; /* Adding some space at the top for the header */
+  background-attachment: scroll; /* So the background scrolls with the content */
+}
+
+/* .img5 {
+    background-image: url("image5.jpg");
+    
+} */
+
+.glitch {
+  font-size: 8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+
+  animation: glitch 500ms infinite;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+  /* color: green; */
+  opacity: 0.8;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+  transform: translate(0.0125em, 0.025em);
+  /* color: red; */
+  opacity: 0.8;
+}
+
+/* https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites */
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+
+h2 {
+    text-align: center;
+    font-family: Rubik Glitch, sans-serif;
+    font-size: 55px;
+}
+
+p {
+    text-align: center;
+    font-family: Alumni Sans, sans-serif;
+    font-size: 20px;
+
+}
+
+h3 {
+    text-align: left;
+    position: relative;
+    right: 32%;
+}
+
+#header {
+      background: white;
+      height: 50px;
+      width: 98%;
+      margin: 10px;
+      border-radius: 2px;
+}
+
+#middle {
+    background: white;
+    height: 150px;
+    width: 98%;
+    margin: 10px;
+    border-radius: 2px;
+}
+
+.cube1 img{
+    width: 10%;
+    display: block;
+}
+
+#cube1 {
+    background:white;
+    height:210px;
+    width:90%;
+    border-radius: 4px;
+    bottom: -10px;
+    overflow:hidden;
+    
+}
+
+#cube2 {
+   background:white;
+    height:210px;
+    width:90%;
+    border-radius: 4px;
+     overflow:hidden;
+}
+
+#cube3 {
+   background:white;
+    height:210px;
+    width:90%;
+    border-radius: 4px;
+     overflow:hidden;
+}
+
+#cube4 {
+    background:white;
+    height:210px;
+    width:90%;
+    border-radius: 4px;
+     overflow:hidden;
+}
+
+#cube5 {
+   background:white;
+    height:210px;
+    width:90%;
+    border-radius: 4px;
+     overflow:hidden;
+    
+}
+
+#cube1 img,
+#cube2 img,
+#cube3 img,
+#cube4 img,
+#cube5 img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+#cube1 img:hover {
+   opacity: 0.8;
+}
+
+#cube2 img:hover {
+   opacity: 0.8;
+}
+#cube3 img:hover {
+   opacity: 0.8;
+}
+#cube4 img:hover {
+   opacity: 0.8;
+}
+#cube5 img:hover {
+   opacity: 0.8;
+}
+
+
+#cube1:active {
+    opacity: 0.5;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+/* I looked back on the labs and found the responsive web design stuff. Hopefully it lookes on phones too now. */
+ 
+@media only screen and (max-width: 1100px) {
+    #wrapper{
+        width:100%;
+    }
+    
+    main{
+        float:left;
+        width:100%;
+    }
+    
+    aside{
+        float:right;
+        width: 33%;
+        margin-top:50px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    section{
+        width:100%;
+        float:none;
+    }
+}
+    
+    aside{
+        float:none;
+        width: 100%;
+    }
